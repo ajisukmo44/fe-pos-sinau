@@ -82,16 +82,16 @@ const MainChart = () => {
   const [totalTax, setTotalTax] = useState('');
 
   const formatRupiah = (number) => {
-  return new Intl.NumberFormat('id-ID', {
-    style: 'currency',
-    currency: 'IDR',
-    minimumFractionDigits: 0,
-  }).format(number);
-};
+    return new Intl.NumberFormat('id-ID', {
+      style: 'currency',
+      currency: 'IDR',
+      minimumFractionDigits: 0,
+    }).format(number);
+  };
 
   useEffect(() => {
     fetchChartData();
-  }, [startDate] [endDate]);
+  }, [startDate, endDate]);
 
   const fetchChartData = async () => {
     const data = {
